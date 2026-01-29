@@ -44,4 +44,4 @@ Unter dem Menüpunkt _Spezialwörter_ kann der selbstgewählte Text zum Leuchten
 
 ## Farben ändern
 
-Unter _Farbeinstellungen_ können sowohl die Farbe der Uhrzeit als auch die Farbe der Spezialwörter eingestellt werden. Nach dem Einstellen der Farben müssen diese gespeichert werden und die Uhrzeit muss erneut synchronisiert werden.
+Unter _Farbeinstellungen_ können sowohl die Farbe der Uhrzeit als auch die Farbe der Spezialwörter eingestellt werden. Nach dem Einstellen der Farben müssen diese gespeichert werden und die Uhrzeit muss erneut synchronisiert werden.......

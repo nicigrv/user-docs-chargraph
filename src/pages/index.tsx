@@ -65,12 +65,8 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div style={{marginTop: '4rem', fontSize: '0.9rem', color: '#999', textAlign: 'center'}}>
+      
 
-
-              <p> Last Edit: Nicolas Greulich / 30.01.2026 00:52 test</p>
-
-        </div>
       </main>
     </Layout>
   );

@@ -116,7 +116,7 @@ const config: Config = {
               href: 'https://www.chargraph.de',
             },
              {
-              label: 'Gitea Repository',
+              label: 'Gitea Repository - CharGraph',
               href: 'https://www.chargraph.de/downloads',
             },
             {
@@ -132,6 +132,10 @@ const config: Config = {
               label: 'Nicolas Greulich',
               to: 'https://nicolasgreulich.de',
             },
+            {
+              label: 'GitHub Repository',
+              to: 'https://github.com/micigrv/user-docs-chargraph'
+            }
            
           ],
         },

@@ -1,36 +1,36 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy to Hosstech
 
 on:
   push:
     branches:
-      - main
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+      - main  # Ändere zu 'master' falls du den main-Branch anders nennst
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Code
+        uses: actions/checkout@v4
       
-      - name: Setup Node.js
+      - name: Setup Node.js 20
         uses: actions/setup-node@v4
         with:
-          node-version: '20'  # Node.js 20 verwenden!
-          
-      - name: Install dependencies
-        run: npm install  # npm install statt npm ci!
-        
-      - name: Build website
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install Dependencies
+        run: npm install
+      
+      - name: Build Website
         run: npm run build
-        
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          path: build
-          
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./build/
+          server-dir: /chargraph.nicolasgreulich.de  # Ändere zu deinem Zielordner (z.B. /httpdocs/ oder /www/)
+          dangerous-clean-slate: false  # Keine bestehenden Dateien löschen

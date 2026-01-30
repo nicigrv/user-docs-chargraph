@@ -33,4 +33,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./build/
           server-dir: /chargraph.nicolasgreulich.de/  # Ändere zu deinem Zielordner (z.B. /httpdocs/ oder /www/)
-          dangerous-clean-slate: false  # Keine bestehenden Dateien löschen
+          dangerous-clean-slate: false  # Keine bestehenden Dateien lösch

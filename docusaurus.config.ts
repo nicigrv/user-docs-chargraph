@@ -22,8 +22,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'micigrv', // Usually your GitHub org/user name.
+  projectName: 'user-docs-chargraph', // Usually your repo name.
 
   onBrokenLinks: 'warn',
 
@@ -43,6 +43,10 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
+
+          showLastUpdateTime: true,  // Zeigt "Last updated on..."
+          showLastUpdateAuthor: true, // Zeigt auch den Autor
+        
           
         },
         blog: {
